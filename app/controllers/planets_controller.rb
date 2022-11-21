@@ -25,25 +25,21 @@ class PlanetsController < ApplicationController
     @planet = Planet.find(params[:id])
   end
 
-
-def update
-  @planet = Planet.find(params[:id])
-  @planet.update(planet_params)
-  redirect_to planet_path(@planet)
-end
+  def update
+    @planet = Planet.find(params[:id])
+    @planet.update(planet_params)
+    redirect_to planet_path(@planet)
+  end
 
   def destroy
     @planet = Planet.find(params[:id])
     @planet.destroy
     redirect_to planets_path, notice: "Planet was successfully destroyed."
   end
-  
 
-private
+  private
 
-def planet_params
-  params.require(:planet).permit(:name, :address, :description, :price)
-
+  def planet_params
+    params.require(:planet).permit(:name, :address, :description, :price)
+  end
 end
-
-end 
