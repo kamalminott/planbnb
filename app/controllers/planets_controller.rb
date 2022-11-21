@@ -21,9 +21,10 @@ class PlanetsController < ApplicationController
     end
   end
 
-def edit
-  @planet = Planet.find(params[:id])
-end
+  def edit
+    @planet = Planet.find(params[:id])
+  end
+
 
 def update
   @planet = Planet.find(params[:id])
@@ -42,6 +43,7 @@ private
 
 def planet_params
   params.require(:planet).permit(:name, :address, :description, :price)
+
 end
 
 end 
