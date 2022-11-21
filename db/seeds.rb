@@ -5,3 +5,8 @@
 #
 #   movies = Movie.create([{ name: "Star Wars" }, { name: "Lord of the Rings" }])
 #   Character.create(name: "Luke", movie: movies.first)
+maaz = User.new(first_name:"maaz", last_name:"sattar", email:"maaz@gmail.com", password:"maaz12345")
+maaz.save!
+jupiter = Planet.new(name:"jupiter", address:"milkyway", price:50000, description:"cold and gassy")
+jupiter.user = maaz
+jupiter.save!
