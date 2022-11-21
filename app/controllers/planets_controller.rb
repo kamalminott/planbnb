@@ -9,28 +9,27 @@ class PlanetsController < ApplicationController
   end
 
   def create
- @planet = Planet.new(planet_params)
- if @planet.save
-  redirect_to @planet
- else
-  render :new
- end
+    @planet = Planet.new(planet_params)
+    if @planet.save
+      redirect_to @planet
+    else
+      render :new
+    end
   end
 
+  def edit
+    @planet = Planet.find(params[:id])
+  end
 
-def edit
-  @planet = Planet.find(params[:id])
-end
+  def update
+    @planet = Planet.find(params[:id])
+    @planet.update(planet_params)
+    redirect_to planet_path(@planet)
+  end
 
-def update
-  @planet = Planet.find(params[:id])
-  @planet.update(planet_params)
-  redirect_to planet_path(@planet)
-end
+  private
 
-private
-
-def planet_params
-  params.require(:planet).permit(:name, :address, :description, :price)
-
+  def planet_params
+    params.require(:planet).permit(:name, :address, :description, :price)
+  end
 end
