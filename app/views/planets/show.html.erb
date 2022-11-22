@@ -1,7 +1,8 @@
 
 <div class="container">
   <h1><strong><%= @planet.name %></strong></h1>
-  <h2>Hosted by: <%= @planet.user.first_name%> <%= @planet.user.last_name %></h2>
+  <h2>Hosted by: <%= @planet.user.first_name %> <%= @planet.user.last_name %></h2>
+
   <h2>Price per night: <%= @planet.price%></h2>
   <p><%= @planet.description %></p>
 
@@ -10,7 +11,9 @@
 <% end %>
 
   <a href="#">Book</a>
+
   <%= link_to "Delete Planet", @planet, data: {turbo_method: :delete, turbo_confirm: "Are you sure?"} %>
   <%= link_to "Edit planet", edit_planet_path %>
   <%= link_to 'Back To Home', root_path(@planet) %>
+  <%= link_to 'Book', new_booking_path(@planet) %>
 </div>

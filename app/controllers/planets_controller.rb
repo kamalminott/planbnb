@@ -1,5 +1,4 @@
 class PlanetsController < ApplicationController
-  before_action :authenticate_user!, only: :index
   def index
     @planets = Planet.all
   end
