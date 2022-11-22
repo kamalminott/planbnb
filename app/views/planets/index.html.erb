@@ -1,6 +1,6 @@
 <h1>All Planets</h1>
 <ul>
 <% @planets.each do |p| %>
-<li><%= p.name  %></li>
+<li><%= link_to p.name, planet_path(planet), class: "m-1 btn btn-light"  %></li>
 <% end %>
 </ul>
