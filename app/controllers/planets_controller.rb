@@ -1,5 +1,5 @@
 class PlanetsController < ApplicationController
-
+  before_action :authenticate_user!, only: :index
   def index
     @planets = Planet.all
   end
@@ -14,6 +14,7 @@ class PlanetsController < ApplicationController
 
   def create
     @planet = Planet.new(planet_params)
+    @planet.user = current_user
     if @planet.save
       redirect_to planet_path(@planet)
     else
