@@ -1,0 +1,9 @@
+<div class="container">
+  <h1>New Booking for <%= @planet.name %></h1>
+  <%= simple_form_for @booking do |b| %>
+  <%= b.input :planet, :as => :hidden, :input_html => { :value => @planet.id } %>
+  <%= b.input :checkin, as: :string, input_html: {type: :date}%>
+  <%= b.input :checkout, as: :string, input_html: {type: :date}%>
+  <%= b.button :submit, 'Click me' %>
+  <% end %>
+</div>
