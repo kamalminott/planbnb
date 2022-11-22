@@ -1,5 +1,6 @@
 <div class="container">
 <h1><strong>All Planets</strong></h1>
+<%= cl_image_tag("dag8rjy3v5vr5id04vwo.jpg", width: 400, crop: :fill) %>
 <ul>
 <% @planets.each do |p| %>
 <li><%= link_to p.name, planet_path(p.id) %></li>
