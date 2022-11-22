@@ -1,5 +1,5 @@
- <h1>New Planet</h1>
-
+<div class="m-5">
+<h1><strong>New Planet</strong></h1>
 <%= simple_form_for (@planet) do |f| %>
   <%= f.input :name %>
   <%= f.input :address %>
@@ -7,6 +7,5 @@
   <%= f.input :price %>
   <%= f.submit   %>
   <% end %>
-
-
+</div>
 <%# link_to plantets_id_path(@planet) %>
