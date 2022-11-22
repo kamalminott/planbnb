@@ -15,9 +15,9 @@ class PlanetsController < ApplicationController
   def create
     @planet = Planet.new(planet_params)
     if @planet.save
-      redirect_to @planet
+      redirect_to planet_path(@planet)
     else
-      render :new
+      render :new, status: :unprocessable_entity
     end
   end
 
