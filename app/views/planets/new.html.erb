@@ -4,8 +4,14 @@
   <%= f.input :name %>
   <%= f.input :address %>
   <%= f.input :description %>
+  <%= f.input :photo, as: :file %>
   <%= f.input :price %>
   <%= f.submit   %>
   <% end %>
+
 </div>
 <%# link_to plantets_id_path(@planet) %>
+
+
+<%= link_to "Back To Index", planets_path(@planets) %>
+
