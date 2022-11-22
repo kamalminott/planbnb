@@ -37,8 +37,7 @@ class PlanetsController < ApplicationController
     redirect_to planets_path, notice: "Planet was successfully destroyed."
   end
 
-
-private
+  private
 
   def planet_params
     params.require(:planet).permit(:name, :address, :description, :price)
