@@ -1,6 +1,9 @@
-<h1>All Planets</h1>
+<div class="container">
+<h1><strong>All Planets</strong></h1>
 <ul>
 <% @planets.each do |p| %>
-<li><%= p.name  %></li>
+<li><%= link_to p.name, planet_path(p.id) %></li>
 <% end %>
 </ul>
+<h5><%= link_to "Post a new Planet", new_planet_path %></h5>
+</div>
