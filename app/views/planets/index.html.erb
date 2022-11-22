@@ -1,10 +1,25 @@
-<div class="container">
-<h1><strong>All Planets</strong></h1>
+
+<%= simple_form_for :search, url: root_path, method: :get do |f| %>
+  <div class="search-form-control form-group m-5">
+    <input class="form-control string required" type="text" name="search[query]" id="search_query" />
+    <button name="button" type="submit" class="btn btn-flat">
+      <i class="fas fa-search"></i> 🥸 Look for planets 🥸
+    </button>
+  </div>
+
 <%= cl_image_tag("dag8rjy3v5vr5id04vwo.jpg", width: 400, crop: :fill) %>
-<ul>
-<% @planets.each do |p| %>
-<li><%= link_to p.name, planet_path(p.id) %></li>
-<% end %>
-</ul>
-<h5><%= link_to "Post a new Planet", new_planet_path %></h5>
+
+
+<div class="card-trip m-5">
+  <% @planets.each do |p| %>
+    <img src="https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/greece.jpg" />
+    <div class="card-trip-infos">
+      <div>
+        <h2> <%= link_to p.name, planet_path(p.id) %> </h2>
+        <p> <%= p.description %> </p>
+      </div>
+      <h2 class="card-trip-pricing">£ <%= p.price %> </h2>
+      <img src="https://kitt.lewagon.com/placeholder/users/krokrob" class="card-trip-user avatar-bordered" />
+    </div>
+  <% end %>
 </div>
