@@ -9,16 +9,21 @@
 <% end %>
 
 
-<div class="card-trip m-5">
+<div class="planet-cards m-5">
   <% @planets.each do |p| %>
-    <img src="https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/greece.jpg" />
-    <div class="card-trip-infos">
+  <div class='planet-card'>
+    <% if p.photo.attached? %>
+        <%= cl_image_tag(p.photo.key)%>
+      <% end %>
+
+    <div class="planet-card-infos">
       <div>
         <h2> <%= link_to p.name, planet_path(p.id) %> </h2>
         <p> <%= p.description %> </p>
       </div>
-      <h2 class="card-trip-pricing">£ <%= p.price %> </h2>
+      <h2 class="planet-card-pricing">£ <%= p.price %> </h2>
       <img src="https://kitt.lewagon.com/placeholder/users/krokrob" class="card-trip-user avatar-bordered" />
     </div>
+  </div>
   <% end %>
 </div>
