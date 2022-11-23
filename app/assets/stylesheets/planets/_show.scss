@@ -1,3 +1,17 @@
+.show-image-desc{
+background: #D6E4E5;
+display: flex;
+border-radius: 5%;
+}
+
+.show-image-desc > img {
+  width: 44%;
+  height: auto;
+}
+
+.show-image-desc > .text {
+margin-left: 10px;
+
 .planet-show{
   color: white;
 }
