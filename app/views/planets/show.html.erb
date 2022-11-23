@@ -1,10 +1,11 @@
 <div class="container m-5 p-5 planet-show">
 
-  <h1><strong><%= @planet.name %></strong></h1>
-
+  <h1 class="text-center"><strong><%= @planet.name %></strong></h1>
+  <div class="text-center">
   <% if @planet.photo.attached? %>
   <%= cl_image_tag (@planet.photo.key) %>
   <% end %>
+  </div>
 
   <h4 class="text-start">Hosted by: <%= @planet.user.first_name %> <%= @planet.user.last_name %></h4>
 
