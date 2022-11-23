@@ -1,29 +1,36 @@
-.card-trip {
+.planet-cards {
+  display: grid;
+  grid-gap: 16px;
+  grid-template-columns: 1fr 1fr 1fr;
   overflow: hidden;
+
+}
+
+.planet-card{
   background: white;
   box-shadow: 0 0 15px rgba(0,0,0,0.2);
 }
 
-.card-trip > img {
+.planet-card > img {
   height: 200px;
   width: 100%;
   object-fit: cover;
 }
 
-.card-trip h2 {
+.planet-card h2 {
   font-size: 16px;
   font-weight: bold;
   margin: 0;
 }
 
-.card-trip p {
+.planet-card p {
   font-size: 12px;
   opacity: .7;
   margin: 0;
 }
 
 
-.card-trip .card-trip-infos {
+.planet-card .planet-card-infos {
   padding: 16px;
   display: flex;
   justify-content: space-between;
