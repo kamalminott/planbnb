@@ -2,8 +2,8 @@
   <h1><strong>My Bookings</strong></h1>
   <ul>
   <% @bookings.each do |b| %>
-  <li><%= b.planet.name %><%= b.planet.address %></li>
-  <p><%= b.checkin %><%= b.checkout %></p>
+  <li><%= link_to b.planet.name%><%= b.planet.address %></li>
+  <p><%= b.checkin %> to <%= b.checkout %></p>
   <% end %>
   </ul>
 </div>

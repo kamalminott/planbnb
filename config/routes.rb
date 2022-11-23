@@ -6,6 +6,7 @@ Rails.application.routes.draw do
  get 'bookings', to: 'bookings#my_bookings'
  get 'planets/:id/new', to: 'bookings#new', as: 'new_booking'
  post 'bookings', to: 'bookings#create'
+ get 'bookings/:id', to: 'bookings#show', as: 'booking'
 
   # Defines the root path route ("/")
   # root "articles#index"
