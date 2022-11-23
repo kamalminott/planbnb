@@ -1,15 +1,19 @@
+
 <div class="container m-5 p-5">
 
-  <h1><strong><%= @planet.name %></strong></h1>
+  <h1 class="planet-title"><strong><%= @planet.name %></strong></h1>
+  <div class="show-image-desc">
+    <% if @planet.photo.attached? %>
+    <%= cl_image_tag (@planet.photo.key) %>
+    <% end %>
+    <div>
+    <h4 class="text-start">Hosted by: <%= @planet.user.first_name %> <%= @planet.user.last_name %></h4>
 
-  <% if @planet.photo.attached? %>
-  <%= cl_image_tag (@planet.photo.key) %>
-  <% end %>
+    <h5 class="text">Price per night: <%= @planet.price%></h5>
+    <p><%= @planet.description %></p>
+    </div>
 
-  <h4 class="text-start">Hosted by: <%= @planet.user.first_name %> <%= @planet.user.last_name %></h4>
-
-  <h5 class="text-end">Price per night: <%= @planet.price%></h5>
-  <p><%= @planet.description %></p>
+  </div>
 
   <div class="m-6">
   <%= link_to "Delete Planet", @planet, class: "btn btn-light", data: {turbo_method: :delete, turbo_confirm: "Are you sure?"} %>

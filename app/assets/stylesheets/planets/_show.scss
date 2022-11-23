@@ -1,0 +1,29 @@
+.show-image-desc{
+background: #D6E4E5;
+display: flex;
+border-radius: 50px;
+margin-bottom: 10px;
+}
+
+.show-image-desc > img {
+  width: 44%;
+  height: auto;
+  border-top-left-radius: 50px;
+  border-bottom-left-radius:50px;
+}
+
+.show-image-desc > .text {
+margin-left: 10px;
+}
+
+.planet-show{
+  color: white;
+}
+
+.planet-title {
+  color: white;
+}
+
+.booking-ref{
+  color:white;
+}
