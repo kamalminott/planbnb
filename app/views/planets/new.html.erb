@@ -1,17 +1,17 @@
-<div class="m-5">
-<h1><strong>New Planet</strong></h1>
-<%= simple_form_for (@planet) do |f| %>
-  <%= f.input :name %>
-  <%= f.input :address %>
-  <%= f.input :description %>
-  <%= f.input :photo, as: :file %>
-  <%= f.input :price %>
-  <%= f.submit   %>
-  <% end %>
-
+<div class="form">
+    <h1><strong>New Planet</strong></h1>
+  <div class="container">
+    <div>
+      <%= simple_form_for (@planet), html: { class: "form-new-planet" } do |f| %>
+        <%= f.input :name %>
+        <%= f.input :address %>
+        <%= f.input :description %>
+        <%= f.input :photo, as: :file %>
+        <%= f.input :price %>
+        <%= f.submit   %>
+      <% end %>
+    </div>
+    <br>
+  </div>
+    <%= link_to "Back To Index", planets_path(@planets), class: "btn btn-outline-dark"%>
 </div>
-<%# link_to plantets_id_path(@planet) %>
-
-
-<%= link_to "Back To Index", planets_path(@planets) %>
-
