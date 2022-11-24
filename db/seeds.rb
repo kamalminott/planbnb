@@ -62,13 +62,13 @@ saturn.save!
 
 
 uranus = Planet.new(name:"Uranus", address:"milkyway", price:2543, description:"Uranus -seventh planet from the Sun- rotates at a nearly 90-degree angle from the plane of its orbit. This unique tilt makes Uranus appear to spin on its side.")
-uranus.user = maaz
+uranus.user = kamal
 file = URI.open("https://solarsystem.nasa.gov/rails/active_storage/blobs/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBBbXB5IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--b7591d57707f65489874a87412390a9b34a9a74e/uranus_480x320.jpg?disposition=inline")
 uranus.photo.attach(io: file, filename: "uranus.png", content_type: "image/png")
 uranus.save!
 
 neptune = Planet.new(name:"Neptune", address:"milkyway", price:3583, description:"Neptune-the eighth and most distant major planet orbiting our Sun-is dark, cold and wipped by supersonic winds. It was the first planet located through mathematical calculations.")
-neptune.user = maaz
+neptune.user = yeon
 file = URI.open("https://solarsystem.nasa.gov/rails/active_storage/blobs/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBBbkp5IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--cb7cb2868fd8b4892788893961c20975baffeb52/neptune_480x320.jpg?disposition=inline")
 neptune.photo.attach(io: file, filename: "neptune.png", content_type: "image/png")
 neptune.save!
