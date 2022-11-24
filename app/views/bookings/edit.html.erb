@@ -1,0 +1,8 @@
+<div class="container">
+  <%= simple_form_for @booking do |f| %>
+    <%= f.input :checkin, as: :string, input_html: {type: :date}%>
+    <%= f.input :checkout, as: :string, input_html: {type: :date}%>
+    <%= f.submit %>
+  <% end %>
+</div>
+<%# <%= link_to "back to list", my_bookings_path, class: "btn btn-outline-dark"   %> %>
