@@ -14,7 +14,7 @@
 
 
 <div class="planet-cards m-5">
-  <% @planets.each do |p| %>
+  <% @planets.shuffle.each do |p| %>
   <div class='planet-card' onclick="this.querySelector('a').click(); return true;">
     <% if p.photo.attached? %>
         <%= cl_image_tag(p.photo.key)%>
