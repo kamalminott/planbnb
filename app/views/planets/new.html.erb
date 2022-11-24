@@ -8,10 +8,10 @@
         <%= f.input :description %>
         <%= f.input :photo, as: :file %>
         <%= f.input :price %>
-        <%= f.submit   %>
+        <%= f.button :submit, 'Create', class:"btn btn-primary"  %>
       <% end %>
     </div>
     <br>
-  </div>
     <%= link_to "Back To Index", planets_path(@planets), class: "btn btn-outline-dark"%>
+  </div>
 </div>
