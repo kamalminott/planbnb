@@ -3,31 +3,32 @@
   src: url('../../fonts/Anurati-Regular.otf') format("truetype");
 }
 
-.whole {
-  position:relative;
+// .whole {
+//   position:relative;
+//   top: -81px;
 
-}
+// }
 
-.whole video {
-    position:relative;
-    z-index:0;
-    background-size: cover;
-    background-position: center;
-    width: 100%;
-}
+// .whole video {
+//     position:relative;
+//     z-index:0;
+//     background-size: cover;
+//     background-position: center;
+//     width: 100%;
+// }
 
-.banner {
-    position:absolute;
-    top:0;
-    left:0;
-    z-index:1;
-}
+// .banner {
+//     position:absolute;
+//     top:0;
+//     left:0;
+//     z-index:1;
+// }
 
-#name-banner{
-font-family: 'Anurati-Regular';
-letter-spacing: 15px;
-color: azure;
-}
+// #name-banner{
+// font-family: 'Anurati-Regular';
+// letter-spacing: 15px;
+// color: azure;
+// }
 
 // .banner {
 //   background-size: cover;
@@ -38,17 +39,68 @@ color: azure;
   // border-radius: 10px;
 // }
 
-.banner h1 {
-  margin: 0;
-  color: rgb(215, 212, 212);
-  text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
-  font-size: 64px;
-  font-weight: bold;
+// .banner h1 {
+//   margin: 0;
+//   color: rgb(215, 212, 212);
+//   text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
+//   font-size: 64px;
+//   font-weight: bold;
+// }
+
+// .banner p {
+//   font-size: 20px;
+//   color: rgb(215, 212, 212);
+//   opacity: .7;
+//   text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
+// }
+#videowrapper {
+  position: relative;
+  overflow: hidden;
+  top: -78px;
 }
 
-.banner p {
-  font-size: 20px;
-  color: rgb(215, 212, 212);
-  opacity: .7;
-  text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
+#fullScreenDiv {
+  min-height: 100%;
+  height: 100vh;
+  width: 100vw;
+  padding: 0!important;
+  margin: 0!important;
+  background-color: gray;
+  position: relative;
+}
+
+#video {
+  height: 812px;
+  width: auto;
+  margin-left: 50vw;
+  transform: translate(-50%);
+}
+
+#videoMessage {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.styling h1 {
+  font-size: 80px;
+  font-family: 'Anurati-Regular';
+  letter-spacing: 15px;
+  text-shadow: 2px 2px 2px #000000;
+}
+
+.styling h2 {
+  font-size: 1.5em;
+}
+
+.styling * {
+  margin: 0.2em;
+  text-align: center;
+  color: #ffffff;
 }
