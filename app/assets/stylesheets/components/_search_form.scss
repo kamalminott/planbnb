@@ -15,12 +15,17 @@
   margin: 1.2rem !important;
 }
 
+#rocket{
+  padding: 1px;
+  color: grey;
+}
 .search-form-control .form-control {
   height: 2.5rem;
   box-shadow: 0 2px 6px rgba(0,0,0,0.08);
   border: 1px solid #E7E7E7;
   background-color: rgb(213, 213, 213);
   border-radius: 50px;
+
 
 }
 
@@ -30,7 +35,7 @@
   box-shadow: 0 2px 6px rgba(0,0,0,0.08);
 }
 #search-bar{
-  width: 90%;
+  width: 45%;
   margin: 0 auto;
 
 }
