@@ -8,7 +8,12 @@ class PlanetsController < ApplicationController
   end
 
   def new
-    @planet = Planet.new
+    if current_user.nil?
+      redirect_to new_user_session_path
+      flash[:notice] = "Please Log In"
+    else
+      @planet = Planet.new
+    end
   end
 
   def create
@@ -42,5 +47,4 @@ class PlanetsController < ApplicationController
   def planet_params
     params.require(:planet).permit(:name, :address, :description, :photo, :price)
   end
-
 end

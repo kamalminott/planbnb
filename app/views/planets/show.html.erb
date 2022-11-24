@@ -16,8 +16,10 @@
   </div>
 
   <div class="m-6">
+  <% if current_user && current_user == @planet.user %>
   <%= link_to "Delete Planet", @planet, class: "btn btn-light", data: {turbo_method: :delete, turbo_confirm: "Are you sure?"} %>
   <%= link_to "Edit planet", edit_planet_path, class: "btn btn-light" %>
+  <% end %>
   <%= link_to 'Back To Home', root_path(@planet), class: "btn btn-light" %>
   <%= link_to 'Book', new_booking_path(@planet), class: "btn btn-light" %>
   </div>
