@@ -1,34 +1,54 @@
-.card-trip {
+.planet-cards {
+  display: grid;
+  grid-gap: 36px;
+  grid-template-columns: 1fr 1fr 1fr;
   overflow: hidden;
-  background: white;
-  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+
 }
 
-.card-trip > img {
-  height: 200px;
+.planet-card{
+  background: black;
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  border-radius: 25px;
+}
+
+.planet-card:hover {
+  opacity: 0.5;
+}
+
+.planet-card > img {
+  height: 260px;
   width: 100%;
   object-fit: cover;
+  border-top-left-radius: 25px;
+  border-top-right-radius: 25px;
 }
 
-.card-trip h2 {
-  font-size: 16px;
+.planet-card h2 {
+  font-size: 26px;
   font-weight: bold;
   margin: 0;
 }
 
-.card-trip p {
-  font-size: 12px;
+
+.planet-card p {
+  font-size: 8px;
   opacity: .7;
   margin: 0;
 }
 
+.planet-card-infos .planet-card-pricing {
+  font-size: 14px;
+}
 
-.card-trip .card-trip-infos {
+
+.planet-card .planet-card-infos {
   padding: 16px;
   display: flex;
   justify-content: space-between;
   align-items: flex-end;
   position: relative;
+  color:antiquewhite;
 }
 
 .card-trip-infos .card-trip-user {
@@ -36,4 +56,10 @@
   right: 16px;
   top: -20px;
   width: 40px;
+}
+
+.planetname {
+  text-decoration: none;
+  color:antiquewhite;
+  pointer-events: none;
 }
