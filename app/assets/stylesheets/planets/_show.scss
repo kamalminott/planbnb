@@ -1,29 +1,34 @@
-g.show-image-desc{
-background: #D6E4E5;
-display: flex;
-border-radius: 50px;
-margin-bottom: 10px;
+.show-image-desc{
+  background-color: rgb(251, 245, 233);
+  display: flex;
+  justify-content: space-between;
+  border-radius: 50px;
 }
 
 .show-image-desc > img {
-  width: 44%;
+  width: 120%;
   height: auto;
   border-top-left-radius: 50px;
   border-bottom-left-radius:50px;
 }
 
 .show-image-desc > .text {
-margin-left: 10px;
+  margin-left: 10px;
 }
 
 .planet-show{
-  color: white;
+  color: black;
 }
 
 .planet-title {
-  color: white;
+  color: rgb(251, 245, 233);
+  font-size: 60px;
 }
 
 .booking-ref{
-  color:white;
+  color: black;
+}
+
+.showpage {
+  color: black  ;
 }
