@@ -1,6 +1,12 @@
 class PlanetsController < ApplicationController
   def index
-    @planets = Planet.all
+    if params[:search].present? && !params[:search][:query].empty?
+      @planets = Planet.search_by_name_address_and_description(params[:search][:query])
+    elsif params[:search]
+      @planets = Planet.all
+    else
+      @planets = Planet.all
+    end
   end
 
   def show
