@@ -13,10 +13,13 @@ class BookingsController < ApplicationController
   end
 
   def new
-    @planet = Planet.find(params[:id])
-    @booking = Booking.new
-    # @booking.user_id = current_user.id
-    # @booking.planet_id = @planet.id
+    if current_user.nil?
+      redirect_to new_user_session_path
+      flash[:notice] = "Please Log In"
+    else
+      @planet = Planet.find(params[:id])
+      @booking = Booking.new
+    end
   end
 
   def create
@@ -35,12 +38,12 @@ class BookingsController < ApplicationController
 
   def update
     @booking.update(booking_params)
-    redirect_to booking_path(@booking)
+    redirect_to bookings_path
   end
 
   def destroy
     @booking.destroy
-    redirect_to bookings_path, notice: "Booking was successfully destroyed."
+    redirect_to bookings_path, notice: "Planet was successfully destroyed."
   end
 
   private
