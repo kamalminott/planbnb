@@ -1,15 +1,25 @@
 
+<div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(https://media.istockphoto.com/id/1035676256/photo/background-of-galaxy-and-stars.jpg?s=612x612&w=0&k=20&c=dh7eWJ6ovqnQZ9QwQQlq2wxqmAR7mgRlQTgaIylgBwc=);">
+  <div class="container">
+    <h1><strong>Plan bnb</strong><strong></strong></h1>
+    <p>Experience of Planet</p>
+  </div>
+</div>
+
+
+
+
+
 <div class="planet-cards m-5">
   <% @planets.each do |p| %>
-  <div class='planet-card'>
+  <div class='planet-card' onclick="this.querySelector('a').click(); return true;">
     <% if p.photo.attached? %>
         <%= cl_image_tag(p.photo.key)%>
       <% end %>
 
     <div class="planet-card-infos">
       <div>
-        <h2> <%= link_to p.name, planet_path(p.id) %> </h2>
-        <p> <%= p.description %> </p>
+        <h2> <%= link_to p.name, planet_path(p.id), class: "planetname" %> </h2>
       </div>
       <h2 class="planet-card-pricing">£ <%= p.price %> </h2>
     </div>
