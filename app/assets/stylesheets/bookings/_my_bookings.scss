@@ -2,8 +2,41 @@
   width: 80%;
   margin: 0 auto;
   // background-color: aliceblue;
+  ul{
+    display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 10px;
+  }
 }
 
+
 .booking-ref {
-  color: whitesmoke;
+  color: rgb(0, 0, 0);
+  background-color: white;
+  border-radius: 10px;
+  overflow: hidden;
+  height: 100%;
+  background: white;
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  display: flex;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding-left: 60px;
+  margin-bottom: 23px;
+  width: 90%;
+}
+
+.booking-ref > .planet-details{
+  margin-top: 20px;
+
+}
+
+.booking-ref > .checkin-out {
+  margin-top: 20px;
+}
+
+.booking-ref > .button{
+  margin-top: 10px;
 }
