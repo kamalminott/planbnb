@@ -34,29 +34,3 @@
 
   <% end %>
   </ul>
-
- <div class="flex-wrapper">
-  <div class="my-bookings-index">
-  <br>
-    <h1 style="color:white;"><strong>My Bookings</strong></h1>
-    <ul>
-    <% @bookings.each do |b| %>
-      <div class="booking-ref">
-        <li><h5><%= b.planet.name %>, <%= b.planet.address.capitalize %></h5></li>
-        <%= b.checkin %> <strong>to</strong> <%= b.checkout %>
-        <%days = b.checkout - b.checkin %>
-        <br>
-        <% if days.to_i == 1 %>
-          <p>Total for <%= days.to_i %> day: <strong>£<%= days.to_i * b.planet.price %></strong></p>
-        <% else %>
-          <p>Total for <%= days.to_i %> days: <strong>£<%= days.to_i * b.planet.price %></strong></p>
-        <% end %>
-        <%= link_to "Edit Booking", edit_booking_path(b), class: "btn btn-light"   %>
-        <%= link_to "Cancel", b, class: "btn btn-warning", data: {turbo_method: :delete, turbo_confirm: "Are you sure?"} %>
-        <br>
-        <br>
-      </div>
-    <% end %>
-    </ul>
-  </div>
-</div>
