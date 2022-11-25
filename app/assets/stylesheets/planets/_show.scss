@@ -1,19 +1,25 @@
 .show-image-desc{
   background-color: rgb(251, 245, 233);
   display: flex;
-  justify-content: space-between;
+  justify-content: flex-start;
   border-radius: 50px;
+  width: auto;
+  height: fit-content;
+  margin: 20px;
+  margin-bottom: 30px;
 }
 
 .show-image-desc > img {
-  width: 120%;
-  height: auto;
+  width: 37em;
+  height: 37em;
   border-top-left-radius: 50px;
-  border-bottom-left-radius:50px;
+  border-bottom-left-radius: 50px;
+  object-fit: fill;
 }
 
 .show-image-desc > .text {
   margin-left: 10px;
+  margin-top: 10px;
 }
 
 .planet-show{
@@ -32,3 +38,11 @@
 .showpage {
   color: black  ;
 }
+
+// @media only screen and (max-width: 769px)  {
+//   .show-image-desc > img {
+//     width: 400px;
+//     height: 400px;
+
+//   }
+// }
