@@ -32,21 +32,23 @@
   </div>
 </div>
 
+<div class="container" style="width: 90%;">
+    <h2 style="color:white;"><strong>Recently Uploaded</strong></h2>
+    <br>
+  <div class="planet-cards m-5">
+    <% @planets.shuffle.each do |p| %>
+    <div class='planet-card' onclick="this.querySelector('a').click(); return true;">
+      <% if p.photo.attached? %>
+          <%= cl_image_tag(p.photo.key)%>
+        <% end %>
 
-
-<div class="planet-cards m-5">
-  <% @planets.shuffle.each do |p| %>
-  <div class='planet-card' onclick="this.querySelector('a').click(); return true;">
-    <% if p.photo.attached? %>
-        <%= cl_image_tag(p.photo.key)%>
-      <% end %>
-
-    <div class="planet-card-infos">
-      <div>
-        <h2> <%= link_to p.name, planet_path(p.id), class: "planetname" %> </h2>
+      <div class="planet-card-infos">
+        <div>
+          <h2> <%= link_to p.name, planet_path(p.id), class: "planetname" %> </h2>
+        </div>
+        <h2 class="planet-card-pricing">£ <%= p.price %> </h2>
       </div>
-      <h2 class="planet-card-pricing">£ <%= p.price %> </h2>
     </div>
+  <% end %>
   </div>
-<% end %>
 </div>
