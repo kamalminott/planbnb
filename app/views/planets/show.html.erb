@@ -7,9 +7,10 @@
         <%= cl_image_tag (@planet.photo.key) %>
         <% end %>
         <div class="p-3">
-        <h4 class="text-start">Hosted by: <%= @planet.user.first_name %> <%= @planet.user.last_name %></h4>
+        <h6 class="text-start"><strong>Hosted by: <%= @planet.user.first_name %> <%= @planet.user.last_name %></strong></h6>
 
-        <h5 class="text">Price per night: £<%= @planet.price%></h5>
+        <h6 class="text"><strong>Price per night: £<%= @planet.price%></strong></h6>
+        <h6 class="text"><strong>Location: <%= @planet.address%></strong></h6>
         <p><%= @planet.description %></p>
 
       <% if current_user != @planet.user %>
