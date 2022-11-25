@@ -35,6 +35,7 @@
     </div>
   <% end %>
 
+
   <div class="container" style="width: 90%;">
       <%# <h2 style="color:white;"><strong>Recently Uploaded</strong></h2> %>
       <br>
@@ -44,6 +45,7 @@
         <% if p.photo.attached? %>
             <%= cl_image_tag(p.photo.key)%>
           <% end %>
+
 
         <div class="planet-card-infos">
           <div>
