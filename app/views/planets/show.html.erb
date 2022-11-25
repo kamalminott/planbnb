@@ -1,4 +1,4 @@
-<div class="showpage">
+<div class="showpage m-5">
   <div class="container mt-5">
 
     <h1 class="planet-title"><strong><%= @planet.name %></strong></h1>
@@ -26,7 +26,7 @@
         </div>
       </div>
 
-    <div class="m-3">
+    <div class="show-page-button">
       <% if current_user && current_user == @planet.user %>
         <%= link_to "Delete Planet", @planet, class: "btn btn-danger", data: {turbo_method: :delete, turbo_confirm: "Are you sure?"} %>
         <%= link_to "Edit planet", edit_planet_path, class: "btn btn-warning" %>
