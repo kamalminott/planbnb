@@ -12,9 +12,9 @@
         <h5 class="text">Price per night: £<%= @planet.price%></h5>
         <p><%= @planet.description %></p>
 
+      <% if current_user != @planet.user %>
         <div class="booking-new-form">
           <h1><strong>New Booking for <%= @planet.name %></strong></h1>
-          <% if current_user != @planet.user %>
             <%= simple_form_for [@booking] do |b| %>
             <%= b.input :planet, :as => :hidden, :input_html => { :value => @planet.id } %>
             <%= b.input :checkin, as: :string, input_html: {type: :date}%>
