@@ -40,6 +40,7 @@
   <% end %>
 
   <div class="container" id="cards" style="width: 90%;">
+
       <%# <h2 style="color:white;"><strong>Recently Uploaded</strong></h2> %>
       <br>
     <div class="planet-cards m-5">
@@ -48,6 +49,7 @@
         <% if p.photo.attached? %>
             <%= cl_image_tag(p.photo.key)%>
           <% end %>
+
 
         <div class="planet-card-infos">
           <div>
