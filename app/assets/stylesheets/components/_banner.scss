@@ -1,14 +1,7 @@
-@font-face {
-  font-family: 'Anurati-Regular';
-  src: font-url('../../fonts/Anurati-Regular.otf') format("truetype");
-}
 
-@font-face {
-  font-family: 'Euclid-Circular-B-Regular';
-  src: font-url('../../fonts/Euclid-Circular-B-Regular.ttf') format("truetype");
-}
 
 @import url('https://fonts.googleapis.com/css2?family=Russo+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
 
 #videowrapper {
   position: relative;
@@ -53,8 +46,8 @@
 }
 
 .styling h2 {
-  font-size:  2.5em;
-  font-family: 'Euclid-Circular-B-Regular';
+  font-size:  1.6em;
+  font-family: 'Montserrat', sans-serif;;
   letter-spacing: 5px;
 }
 
@@ -65,6 +58,6 @@
 }
 
 body{
-  font-family: 'Euclid-Circular-B-Regular';
+  font-family: 'Montserrat', sans-serif;;
   letter-spacing: 1px;
 }
