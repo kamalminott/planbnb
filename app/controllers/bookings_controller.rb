@@ -10,7 +10,7 @@ class BookingsController < ApplicationController
       redirect_to new_user_session_path
       flash[:notice] = "Please Log In"
     else
-    @bookings = Booking.where(user_id: current_user.id)
+      @bookings = Booking.where(user_id: current_user.id)
     end
   end
 

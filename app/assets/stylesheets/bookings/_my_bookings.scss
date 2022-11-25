@@ -6,4 +6,12 @@
 
 .booking-ref {
   color: whitesmoke;
+  font-family: 'Source Sans Pro', sans-serif;
+}
+
+.flex-wrapper {
+  display: flex;
+  min-height: 80vh;
+  flex-direction: column;
+  justify-content: space-between;
 }
