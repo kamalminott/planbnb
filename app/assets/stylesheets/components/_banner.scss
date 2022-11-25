@@ -8,7 +8,7 @@
   src: font-url('../../fonts/Euclid-Circular-B-Regular.ttf') format("truetype");
 }
 
-
+@import url('https://fonts.googleapis.com/css2?family=Russo+One&display=swap');
 
 #videowrapper {
   position: relative;
@@ -47,7 +47,7 @@
 
 .styling h1 {
   font-size: 105px;;
-  font-family: 'Anurati-Regular';
+  font-family: 'Russo One', sans-serif;
   letter-spacing: 15px;
   text-shadow: 2px 2px 2px #000000;
 }
