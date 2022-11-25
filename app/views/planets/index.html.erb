@@ -20,37 +20,41 @@
   </div>
 </div> %>
 
-<div id="videowrapper">
-  <div id="fullScreenDiv">
-    <video id="video" role="presentation" preload="auto" playsinline="" crossorigin="anonymous" loop="" muted="" autoplay="" class="blur">
-      <source src="https://giant.gfycat.com/DifferentGiftedCoyote.mp4" type="video/mp4">
-    </video>
-    <div id="videoMessage" class="styling">
-      <h1>PLAN BNB</h1>
-      <h2>Experience a New Planet</h2>
-    </div>
-  </div>
-</div>
-
-<div class="container" style="width: 90%;">
-    <h2 style="color:white;"><strong>Recently Uploaded</strong></h2>
-    <br>
-
-
-  <div class="planet-cards m-5">
-    <% @planets.shuffle.each do |p| %>
-    <div class='planet-card' onclick="this.querySelector('a').click(); return true;">
-      <% if p.photo.attached? %>
-          <%= cl_image_tag(p.photo.key)%>
-        <% end %>
-
-      <div class="planet-card-infos">
-        <div>
-          <h2> <%= link_to p.name, planet_path(p.id), class: "planetname" %> </h2>
+ <div class="flex-wrapper">
+  <% if params[:search].nil? %>
+    <div id="videowrapper">
+      <div id="fullScreenDiv">
+        <video id="video" role="presentation" preload="auto" playsinline="" crossorigin="anonymous" loop="" muted="" autoplay="" class="blur">
+          <source src="https://giant.gfycat.com/DifferentGiftedCoyote.mp4" type="video/mp4">
+        </video>
+        <div id="videoMessage" class="styling">
+          <h1>PLAN BNB</h1>
+          <h2>Experience a New Planet</h2>
         </div>
-        <h2 class="planet-card-pricing">£ <%= p.price %> </h2>
       </div>
     </div>
   <% end %>
+
+
+  <div class="container" style="width: 90%;">
+      <%# <h2 style="color:white;"><strong>Recently Uploaded</strong></h2> %>
+      <br>
+    <div class="planet-cards m-5">
+      <% @planets.shuffle.each do |p| %>
+      <div class='planet-card' onclick="this.querySelector('a').click(); return true;">
+        <% if p.photo.attached? %>
+            <%= cl_image_tag(p.photo.key)%>
+          <% end %>
+
+
+        <div class="planet-card-infos">
+          <div>
+            <h2> <%= link_to p.name, planet_path(p.id), class: "planetname" %> </h2>
+          </div>
+          <h2 class="planet-card-pricing">£ <%= p.price %> </h2>
+        </div>
+      </div>
+    <% end %>
+    </div>
   </div>
-</div>
+  </div>

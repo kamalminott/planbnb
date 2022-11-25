@@ -1,23 +1,37 @@
-<div class="my-bookings-index">
-<br>
-  <h1 style="color:white;"><strong>My Bookings</strong></h1>
-  <ul>
-  <% @bookings.each do |b| %>
-    <div class="booking-ref">
-      <li><h5><%= b.planet.name %>, <%= b.planet.address.capitalize %></h5></li>
-      <%= b.checkin %> <strong>to</strong> <%= b.checkout %>
-      <%days = b.checkout - b.checkin %>
-      <br>
-      <% if days.to_i == 1 %>
-        <p>Total for <%= days.to_i %> day: <strong>£<%= days.to_i * b.planet.price %></strong></p>
-      <% else %>
-        <p>Total for <%= days.to_i %> days: <strong>£<%= days.to_i * b.planet.price %></strong></p>
-      <% end %>
-      <%= link_to "Edit Booking", edit_booking_path(b), class: "btn btn-light"   %>
-      <%= link_to "Cancel", b, class: "btn btn-warning", data: {turbo_method: :delete, turbo_confirm: "Are you sure?"} %>
-      <br>
-      <br>
-    </div>
-  <% end %>
-  </ul>
-</div>
+<div class="flex-wrapper">
+  <div class="my-bookings-index">
+  <br>
+    <h1 style="color:white;"><strong>My Bookings</strong></h1>
+    <ul>
+    <% @bookings.each do |b| %>
+      <div class="booking-ref">
+        <div class ="planet-details">
+          <%# <h3>Planet Name</h3> %>
+          <h3><strong><%= b.planet.name %>, <%= b.planet.address.capitalize %></strong></h5>
+        </div>
+        <div class ="checkin-out">
+          <h5><strong>Dates:</strong></h3>
+          <%= b.checkin %>
+          <br>to
+          <br> <%= b.checkout %>
+        </div>
+          <%days = b.checkout - b.checkin %>
+        <br>
+        <%# <h3>Total Price</h3> %>
+        <% if days.to_i == 1 %>
+          <p><h5><strong>Total for <%= days.to_i %> day:</strong></h5>
+          £<%= days.to_i * b.planet.price %></p>
+        <% else %>
+          <p><h5><strong>Total for <%= days.to_i %> days:</strong></h5> £<%= days.to_i * b.planet.price %></p>
+        <% end %>
+        <div class = buttons>
+        <%= link_to "Edit Booking", edit_booking_path(b), class: "btn btn-light"   %>
+        <%= link_to "Cancel", b, class: "btn btn-warning", data: {turbo_method: :delete, turbo_confirm: "Are you sure?"} %>
+        </div>
+        <br>
+        <br>
+      </div>
+
+    <% end %>
+    </ul>
+  </div>
